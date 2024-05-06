@@ -1,0 +1,53 @@
+logger:
+  name: masquerade-dns
+  debug: false
+
+http:
+  host: 127.0.0.1
+  port: 8080
+
+dns:
+  host: 0.0.0.0
+  port: 53
+  timeout: 5s
+
+switcher:
+  settings:
+    - source: /dns-test/
+      answer:
+        cname: wantvisit.com
+        https:
+          priority: 1
+          target: wantvisit.com
+          alpn:
+            - h3
+            - h3-29
+            - h2
+      maxCount: 10
+      ttl: 180
+    - source: /dns-https-test/
+      answer:
+        https:
+          priority: 1
+          target: wantvisit.com
+      maxCount: 50
+      ttl: 180
+    - source: /dns-tiny-test/
+      destination: wantvisit.com
+      ttl: 180
+
+limiter:
+  ttl: 5m
+
+resolver:
+  timeout: 5s
+  mode: round-robin
+  nameservers:
+    - address: 8.8.8.8:53
+      network: udp
+    - address: 8.8.4.4:53
+      network: udp
+    - address: 9.9.9.9:53
+      network: udp
+    - address: 1.1.1.1:53
+      network: tcp

@@ -1,0 +1,12 @@
+linters:
+  enable-all: true
+  disable:
+    - depguard
+    - gofumpt
+    - goimports
+    - gci
+    - varnamelen
+    - exhaustruct
+
+run:
+  issues-exit-code: 0
