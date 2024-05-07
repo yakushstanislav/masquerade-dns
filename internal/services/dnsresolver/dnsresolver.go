@@ -104,6 +104,6 @@ func (s *Service) nameserver() nameserver {
 		return nameserver
 
 	default:
-		panic("scheduler mode is not supported")
+		panic("resolver mode is not supported")
 	}
 }
