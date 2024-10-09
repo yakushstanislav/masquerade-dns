@@ -1,9 +1,10 @@
 package metrics
 
 import (
+	"net"
+
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	"net"
 )
 
 const (

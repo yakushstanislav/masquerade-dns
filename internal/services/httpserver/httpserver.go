@@ -9,6 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.uber.org/zap"
+
 	"masquerade-dns/internal/pkg/logger"
 )
 

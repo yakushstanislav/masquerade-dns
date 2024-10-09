@@ -2,17 +2,17 @@ package dnsserver
 
 import (
 	"context"
-	"masquerade-dns/internal/metrics"
 	"net"
 	"strconv"
 	"time"
 
-	"masquerade-dns/internal/pkg/logger"
-	"masquerade-dns/internal/pkg/trace"
-
 	"github.com/miekg/dns"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
+
+	"masquerade-dns/internal/metrics"
+	"masquerade-dns/internal/pkg/logger"
+	"masquerade-dns/internal/pkg/trace"
 )
 
 const handlerPattern = "."

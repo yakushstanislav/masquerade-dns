@@ -2,12 +2,13 @@ package dnsresolver
 
 import (
 	"context"
-	"masquerade-dns/internal/metrics"
 	"math/rand/v2"
 	"time"
 
 	"github.com/miekg/dns"
 	"go.uber.org/zap"
+
+	"masquerade-dns/internal/metrics"
 	"masquerade-dns/internal/pkg/logger"
 	"masquerade-dns/internal/pkg/trace"
 )

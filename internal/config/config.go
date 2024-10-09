@@ -3,6 +3,7 @@ package config
 import (
 	"github.com/ilyakaznacheev/cleanenv"
 	"github.com/pkg/errors"
+
 	"masquerade-dns/internal/pkg/logger"
 	"masquerade-dns/internal/services/dnslimiter"
 	"masquerade-dns/internal/services/dnsresolver"

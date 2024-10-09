@@ -2,14 +2,16 @@ package dnsswitcher
 
 import (
 	"context"
-	"github.com/miekg/dns"
-	"go.uber.org/zap"
-	"masquerade-dns/internal/metrics"
-	"masquerade-dns/internal/pkg/logger"
-	"masquerade-dns/internal/pkg/trace"
 	"net"
 	"regexp"
 	"strings"
+
+	"github.com/miekg/dns"
+	"go.uber.org/zap"
+
+	"masquerade-dns/internal/metrics"
+	"masquerade-dns/internal/pkg/logger"
+	"masquerade-dns/internal/pkg/trace"
 )
 
 type dnsLimiter interface {

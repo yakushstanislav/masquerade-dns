@@ -2,9 +2,10 @@ package dnslimiter
 
 import (
 	"fmt"
-	"github.com/dgraph-io/ristretto"
 	"net"
 	"time"
+
+	"github.com/dgraph-io/ristretto"
 )
 
 const (
